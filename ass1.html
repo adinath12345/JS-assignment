@@ -1,0 +1,74 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h3>Question no 1:-</h3>
+        <script>
+            var a=new Date();
+            var day=a.getDay();
+            var day_list=["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"]
+            document.write("Today is : "+ day_list[day]+".");
+            document.write("<br>");
+            
+
+            var hrs=a.getHours();
+            var mins=a.getMinutes();
+            var secs=a.getSeconds();
+            var ampm=(hrs>=12)? "PM":"AM";
+
+            hrs = (hrs >= 12)? hrs - 12: hrs;
+            if (hrs===0 && ampm===' PM ') 
+            { 
+            if (mins===0 && secs===0)
+            { 
+            hrs=12;
+            ampm=' Noon';
+            } 
+            else
+            { 
+            hrs=12;
+            ampm=' PM';
+            } 
+            } 
+            if (hrs===0 && ampm===' AM ') 
+            { 
+            if (mins===0 && secs===0)
+            { 
+            hrs=12;
+            ampm=' Midnight';
+            } 
+            else
+            { 
+            hrs=12;
+            ampm=' AM';
+            } 
+            } 
+            
+            document.write("Current Time : "+hrs + ampm + " : " + mins + " : " + secs);
+
+
+        </script>
+
+        <hr><hr>
+
+        <h3>Question No 2:-</h3>
+        
+        <button type="button" onclick="window.print()">Click me For printing Current Page</button>
+        <hr><hr>
+
+        <h3>Question no 3:-</h3>
+        <script>
+            var today=new Date();
+            var dd=today.getDate();
+            var mm= today.getMonth()+1;
+            var yy=today.getFullYear();
+
+            today=dd+'/'+mm+'/'+yy
+            document.write(today);
+        </script>
+
+
+
+    </body>
+</html>
